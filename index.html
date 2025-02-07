@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise Day</title>
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      background: url('https://source.unsplash.com/1600x900/?love,promise') no-repeat center center/cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      color: white;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 80%;
+    }
+    .envelope {
+      cursor: pointer;
+      font-size: 80px;
+      transition: transform 0.3s ease;
+    }
+    .envelope:hover {
+      transform: scale(1.2);
+    }
+    .message {
+      display: none;
+      font-size: 40px;
+      margin-top: 30px;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .quote {
+      font-style: italic;
+      font-size: 30px;
+      margin-top: 20px;
+      color: #ffcccb;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="envelope" onclick="showMessage()">💌</div>
+    <div class="message" id="message">
+      <p>"I promise to stand by your side forever and love you unconditionally. You are my heart and soul. 💖"</p>
+      <p class="quote">"A promise means everything, but once it is broken, sorry means nothing."<br> Happy Promise Day my love 💝</p>
+<img class="animation" id="animation" src="https://media.giphy.com/media/JEZ3wy3IUQR8s/giphy.gif?cid=790b761141i8n3dypekbu2u3ipddgtlvbzsrp9iffweiq54s&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="promise">
+
+    </div>
+  </div>
+  
+  <script>
+    function showMessage() {
+      document.querySelector('.envelope').style.display = 'none';
+      document.getElementById('message').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
